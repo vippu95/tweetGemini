@@ -10,7 +10,7 @@ import { locales } from '../background/chat_gpt_client/locales';
 import { defaultLocale } from '../background/chat_gpt_client/locales';
 
 export const SettingsScreen = () => {
-    const logoPath = useMemo(() => chrome.runtime.getURL('icons/128.png'), []);
+    const logoPath = useMemo(() => chrome.runtime.getURL('icons/modified_icon.png'), []);
     const [openAIToken, setOpenAIToken] = useState('');
     const [selectedLanguage, setLanguage] = useState(defaultLocale);
     const [isAddSignature, setAddSignature] = useState(true);
