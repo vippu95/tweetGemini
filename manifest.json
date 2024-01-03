@@ -16,10 +16,10 @@
       "matches": ["https://twitter.com/*"]
     },
     "icons": {
-        "16": "icons/16.png",
-        "32": "icons/32.png",
-        "48": "icons/48.png",
-        "128": "icons/128.png"
+        "16": "icons/modified_icon.png",
+        "32": "icons/modified_icon.png",
+        "48": "icons/modified_icon.png",
+        "128": "icons/modified_icon.png"
     },
     "background": {
       "service_worker": "lib/background.js"
