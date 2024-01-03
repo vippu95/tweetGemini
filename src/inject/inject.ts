@@ -21,18 +21,19 @@ const onToolBarAdded = (toolBarEl: Element) => {
                 replyTo = textEl.textContent;
             }
 
+            setInputText(inputEl, "Tweet Gemini is working ...");
+
             const text = await generateText({
                 locale: (await chrome.storage.local.get('language')).language ?? defaultLocale,
                 type,
                 replyTo,
                 topic
             });
+
             if (text) {
-                inputEl = findClosestInput(toolBarEl);
-                if (inputEl) {
-                    setInputText(inputEl, text);
-                }
+              setInputText(inputEl, text);
             } else { // show error
+                setInputText(inputEl, "An error occurred. Please try again.");
                 showErrorButton(toolBarEl);
             }
         });

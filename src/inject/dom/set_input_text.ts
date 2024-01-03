@@ -1,6 +1,6 @@
 import { wait } from "../../utils/wait";
 
-export const setInputText = async (inputEl: HTMLInputElement, text: string) => {
+export const setInputText = async (inputEl: HTMLInputElement | null, text: string) => {
 
     const classNameToSelect = "public-DraftStyleDefault-block public-DraftStyleDefault-ltr";
 
@@ -9,7 +9,7 @@ export const setInputText = async (inputEl: HTMLInputElement, text: string) => {
 
     // Check for null before accessing properties
     if (element) {
-        element.textContent = "test";
+        element.textContent = text;
         element.click();
 
         // Create the input event with type safety
