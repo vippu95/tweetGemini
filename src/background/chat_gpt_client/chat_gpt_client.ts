@@ -59,7 +59,7 @@ export class ChatGPTClient {
       }
 
       const responseJSON = await response.json();
-      const tweet = responseJSON?.choices[0].message?.content || '';
+      const tweet = responseJSON?.candidates[0].content?.parts[0].text || '';
       return tweet.trim()
         .replace(/^\"/g, "")
         .replace(/\"$/g, "")
