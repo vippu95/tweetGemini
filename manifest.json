@@ -1,7 +1,7 @@
 {
     "name": "TweetGPT",
     "manifest_version": 3,
-    "version": "2.0.4",
+    "version": "2.0.3",
     "description": "Helps writing tweets using chatGPT",
     "permissions": [
       "storage",
