@@ -1,7 +1,7 @@
 {
-  "name": "twitter-gpt",
-  "version": "2.0.1",
-  "description": "A chrome extension that writes tweets with chatGPT",
+  "name": "twitter-gemini",
+  "version": "1.0.1",
+  "description": "A chrome extension that writes tweets with Gemini",
   "main": "lib/background.js",
   "author": "Yaroslav https://twitter.com/512x512",
   "license": "MIT",
