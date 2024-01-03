@@ -10,11 +10,13 @@ export type TweetProps = {
 export class ChatGPTClient {
   waitForTokenCallback: ((newGptToken: string) => void) | undefined;
   async generateTweet(props: TweetProps): Promise<string | undefined> {
-    // const token = await this.getToken();
+    const token = await this.getToken();
 
-    // if (!token) {
-    //     return Promise.reject();
-    // }
+    if (!token) {
+        return Promise.reject();
+    }
+
+    const geminiEndpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key="${token}"`;
 
     const systemMessage = `You are a ghostwriter for users tweets. Use locale "${props.locale}". Return only one tweet. Keep it short.`;
     const systemMessage2 =
@@ -29,7 +31,7 @@ export class ChatGPTClient {
     };
 
     try {
-      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=AIzaSyD11sYskg42etx6TSVecvGlNfFml4EBklg`, {
+      const response = await fetch(geminiEndpoint, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
