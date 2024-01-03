@@ -1,11 +1,19 @@
 import { wait } from "../../utils/wait";
 
 export const setInputText = async (inputEl: HTMLInputElement, text: string) => {
-    const textWrapper = inputEl.querySelector('[data-text="true"]')?.parentElement;
+
+    const elements = document.getElementsByClassName("public-DraftStyleDefault-block public-DraftStyleDefault-ltr")[0].getElementsByTagName("span");
+
+    if (elements.length === 0) {
+        return;
+    }
+    
+    const textWrapper = elements[0];
+
     if (textWrapper) {
+        textWrapper.focus
         textWrapper.textContent = text
         textWrapper.click
-        //textWrapper.innerHTML = `<span data-text="true">${text}</span>`;
         textWrapper.dispatchEvent(new Event('input', { 'bubbles': true, 'cancelable': true }));
     }
 };
