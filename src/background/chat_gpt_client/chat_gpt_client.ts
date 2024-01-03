@@ -16,7 +16,7 @@ export class ChatGPTClient {
         return Promise.reject();
     }
 
-    const geminiEndpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key="${token}"`;
+    const geminiEndpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${token}`;
 
     const systemMessage = `You are a ghostwriter for users tweets. Use locale "${props.locale}". Return only one tweet. Keep it short.`;
     const systemMessage2 =
