@@ -5,9 +5,7 @@ export const setInputText = async (inputEl: HTMLInputElement, text: string) => {
     const classNameToSelect = "public-DraftStyleDefault-block public-DraftStyleDefault-ltr";
 
     // Use querySelector to get the first matching element and ensure type safety
-    const element = document.querySelector<HTMLElement>(
-    `.${classNameToSelect}`
-    ) as HTMLElement;
+    const element = document.getElementsByClassName(classNameToSelect)[0] as HTMLElement | undefined;
 
     // Check for null before accessing properties
     if (element) {
