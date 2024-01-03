@@ -10,7 +10,7 @@
     ],
     "host_permissions": [
       "https://twitter.com/",
-      "https://generativelanguage.googleapis.com"
+      "https://generativelanguage.googleapis.com/"
     ],
     "externally_connectable": {
       "matches": ["https://twitter.com/*"]
